@@ -23,3 +23,19 @@ if (age > 99){
 } else {
     console.log("Move along")
 }
+
+const readline = require("readline");
+
+const reader = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+reader.question("Enter a number to see if it's Adam's favorite: ", function(answer){
+    if(+answer === 12){
+        console.log("That's Adam's favorite number!")
+    } else {
+        console.log("Womp womp thanks for playing")
+    }
+    reader.close()
+});
